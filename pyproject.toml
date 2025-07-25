@@ -12,6 +12,7 @@ sqlalchemy = "^2.0.41"
 aiohttp = "^3.12.14"
 beautifulsoup4 = "^4.13.4"
 dishka = "^1.6.0"
+lxml = "^6.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
