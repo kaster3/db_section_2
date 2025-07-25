@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 load-dotenv = "^0.1.0"
+sqlalchemy = "^2.0.41"
 
 
 [tool.poetry.group.dev.dependencies]
