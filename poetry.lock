@@ -167,6 +167,20 @@ colors = ["colorama"]
 plugins = ["setuptools"]
 
 [[package]]
+name = "load-dotenv"
+version = "0.1.0"
+description = "Automatically and implicitly load environment variables from .env file"
+optional = false
+python-versions = "*"
+files = [
+    {file = "load-dotenv-0.1.0.tar.gz", hash = "sha256:bbe5f40072d4a61eadca66de6c222df5a2d935d6d41b703be1ff75396f635145"},
+    {file = "load_dotenv-0.1.0-py3-none-any.whl", hash = "sha256:614803f720153fb8a5f97124a72aaa3930a67aa5547cbe8603d01ea7f9ac1adf"},
+]
+
+[package.dependencies]
+python-dotenv = "*"
+
+[[package]]
 name = "mccabe"
 version = "0.7.0"
 description = "McCabe checker, plugin for flake8"
@@ -278,6 +292,20 @@ files = [
 ]
 
 [[package]]
+name = "python-dotenv"
+version = "1.1.1"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "python_dotenv-1.1.1-py3-none-any.whl", hash = "sha256:31f23644fe2602f88ff55e1f5c79ba497e01224ee7737937930c448e4d0e24dc"},
+    {file = "python_dotenv-1.1.1.tar.gz", hash = "sha256:a8a6399716257f45be6a007360200409fce5cda2661e3dec71d23dc15f6189ab"},
+]
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
 name = "pyyaml"
 version = "6.0.2"
 description = "YAML parser and emitter for Python"
@@ -362,4 +390,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "142fbf0d58870c4467582e0a1bbba6190b46ed9eafdb593e06241768ed8aab8c"
+content-hash = "b73f278f08a9f8bce77e51e27c784e45a2e7c2e073f605a9a0dea87f62dd1158"
