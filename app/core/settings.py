@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 @dataclass(slots=True)
 class Logs:
     format: str
-    log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"] = "WARNING"
+    level: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"] = "WARNING"
 
 
 @dataclass(slots=True)
@@ -17,11 +17,17 @@ class Postgresql:
     url: str
 
 
+@dataclass(slots=True)
+class Links:
+    url = "https://spimex.com/markets/oil_products/trades/results/"
+
+
 class Settings:
     def __init__(self) -> None:
         self._load_config()
-        self.logs = Logs(log_level=os.getenv("LOG_LEVEL"), format=os.getenv("FORMAT"))
+        self.logs = Logs(level=os.getenv("LOG_LEVEL"), format=os.getenv("FORMAT"))
         self.db = Postgresql(url=os.getenv("DB_URL"))
+        self.links = Links()
 
     @staticmethod
     def _load_config() -> None:
